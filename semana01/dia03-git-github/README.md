@@ -1,4 +1,4 @@
-# Bootcamp Frontend G30
+# Bootcamp Frontend G34
 
 Este repositorio nos sirve para aprender el flujo de trabajo de GIT y Github.
 
