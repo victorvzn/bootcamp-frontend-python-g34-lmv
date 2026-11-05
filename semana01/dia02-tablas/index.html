@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
+</head>
+<body>
+  <main class="container">
+    <h2>Tablas</h2>
+
+    <h3>Tabla básica</h3>
+
+    <table>
+      <tr>
+        <th>#Fila1, Celda1</th>
+        <th>#Fila1, Celda2</th>
+        <th>#Fila1, Celda3</th>
+      </tr>
+
+      <tr>
+        <td>#Fila2, Celda1</td>
+        <td>#Fila2, Celda2</td>
+        <td>#Fila2, Celda3</td>
+      </tr>
+
+      <tr>
+        <td>#Fila3, Celda1</td>
+        <td>#Fila3, Celda2</td>
+        <td>#Fila3, Celda3</td>
+      </tr>
+    </table>
+
+    <h3>Tablas semánticas</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#Fila1, Celda1</th>
+          <th>#Fila1, Celda2</th>
+          <th>#Fila1, Celda3</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#Fila2, Celda1</td>
+          <td>#Fila2, Celda2</td>
+          <td>#Fila2, Celda3</td>
+        </tr>
+        
+        <tr>
+          <td>#Fila3, Celda1</td>
+          <td>#Fila3, Celda2</td>
+          <td>#Fila3, Celda3</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>#Fila4, Celda1</td>
+          <td>#Fila4, Celda2</td>
+          <td>#Fila4, Celda3</td>
+        </tr>
+        <tr>
+          <td colspan="2">TOTAL</td>
+          <td>S/ 999.67</td>
+        </tr>
+        <tr>
+          <td colspan="2">FilaA, Celda1</td>
+          <td rowspan="2">FilaB, Celda2</td>
+        </tr>
+        <tr>
+          <td colspan="2">FilaC, Celda 3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+</body>
+</html>
