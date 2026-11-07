@@ -11,3 +11,33 @@ p {
 }
 
 /* TODO: Añadan un background a la etiqueta h1 y cambien su tamaño a 50px */
+
+h1 {
+  background-color: chocolate;
+  color: blue;
+  font-size: 50px;
+}
+
+h3 {
+  background-color: orange;
+}
+
+#estado {
+  background-color: brown;
+}
+
+.btn {
+  background-color: black;
+}
+
+.success {
+  background-color: violet;
+}
+
+.error {
+  background-color: red;
+}
+
+.texto-resaltado {
+  color: blue;
+}
