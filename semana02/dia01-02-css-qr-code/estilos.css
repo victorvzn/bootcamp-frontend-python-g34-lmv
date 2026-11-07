@@ -1,4 +1,6 @@
 body {
+  font-family: "Outfit", sans-serif;
+
   background-color: hsl(212, 45%, 89%);
   font-size: 15px;
 
@@ -6,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* vh: viewport height */
 }
 
 main {
