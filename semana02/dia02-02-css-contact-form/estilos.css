@@ -1,0 +1,25 @@
+body {
+  background-color: hsl(148, 38%, 91%);
+
+  display: flex; /* flexbox */
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.contact-form {
+  border: 1px solid red;
+
+  width: 400px;
+  background-color: white;
+  background-color: #fff;
+  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 32px;
+  color: hsl(187, 24%, 22%);
+}
