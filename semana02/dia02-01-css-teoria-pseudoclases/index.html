@@ -95,6 +95,28 @@
       color: inherit;
       font-family: inherit;
     }
+
+    /* Cascada */
+
+    header {
+      color: green;
+    }
+
+    .texto {
+      color: red;
+    }
+
+    #cabecera {
+      color: blue;
+    }
+
+    p {
+      color: red;
+    }
+
+    p {
+      color: blueviolet; /* Gana esta */
+    }
   </style>
 </head>
 <body>
@@ -125,6 +147,11 @@
     <p>Otro párrafo fuera en un section</p>
     <a href="#">enlace a mi pagina</a>
   </section>
-  </section>
+  
+  <h1>Cascada</h1>
+
+  <header id="cabecera" class="texto">¿De qué color soy?</header>
+
+  <p>¿Rojo o azul? Gana la regla escrita al final.</p>
 </body>
 </html>
