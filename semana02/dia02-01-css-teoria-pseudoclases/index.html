@@ -47,6 +47,26 @@
       background-color: gold;
       color: blue;
     }
+
+    /* Selectores combinados */
+
+    /* Selector descendiente - NO USARLO SOLO ESTÁ COMO REFERENCIA */
+
+    article p {
+      border: 1px solid red;
+    }
+
+    /* Selectores de hijo directo > - NO USARLO SOLO ESTÁ COMO REFERENCIA */
+
+    article > strong {
+      color: red;
+    }
+
+    p > strong {
+      color: blue;
+    }
+
+    /*  */
   </style>
 </head>
 <body>
@@ -65,5 +85,16 @@
 
   <input type="text" placeholder="¿Hola, como estas?" />
 
+  <h1>Selectores combinados</h1>
+
+  <article>
+    <h2>Bienvenido</h2>
+    <p>Mi párrafo</p>
+    <p>Segundo párrafo con <strong>texto importante</strong>.</p>
+  </article>
+
+  <section>
+    <p>Otro párrafo fuera en un section</p>
+  </section>
 </body>
 </html>
