@@ -1,5 +1,67 @@
 /* TODO: Terminar el diseño con CSS de este ejercicio: social links */
 
 body {
-  background-color: yellow;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.perfil {
+  /* border: 1px solid red; */
+
+  background-color: hsl(0, 0%, 12%);
+
+  width: 350px;
+
+  text-align: center;
+
+  padding: 32px;
+
+  border-radius: 16px;
+}
+
+.perfil h1 {
+  /* border: 1px solid red; */
+  margin: 0;
+}
+
+.perfil h3 {
+  color: yellow;
+  margin: 0;
+}
+
+.perfil p {
+  margin: 48px 0'; /* 0 : top, bottom; 32 : left, right*/
+}
+
+img {
+  border-radius: 100px;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.enlaces a {
+  background-color: hsl(0, 0%, 20%);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.enlaces a:hover {
+  background-color: hsl(0, 0%, 30%);
 }
