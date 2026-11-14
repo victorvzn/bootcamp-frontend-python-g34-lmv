@@ -60,7 +60,12 @@ textarea {
 /* TODO: Darle estilos al boton del formulario */
 
 input[type=submit] {
-
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 /* TODO: Darle estilos al query type del formulario */
