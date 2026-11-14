@@ -66,6 +66,8 @@ input[type=submit] {
   border: none;
   border-radius: 8px;
   padding: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* TODO: Darle estilos al query type del formulario */
