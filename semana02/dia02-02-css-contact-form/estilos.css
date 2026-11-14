@@ -71,8 +71,6 @@ input[type=submit] {
   letter-spacing: 1px;
 }
 
-/* TODO: Darle estilos al query type del formulario */
-
 .query-type {
   border: 1px solid hsl(186, 15%, 59%);
   padding: 16px;
@@ -80,5 +78,29 @@ input[type=submit] {
   border-radius: 8px;
 
   display: flex;
-  gap: 4px;
+  align-items: center;
+  gap: 8px;
+  color: hsl(187, 24%, 22%);
+  cursor: pointer;
+}
+
+.query-type:hover,
+.query-type:has(input:checked) {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.query-type:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+}
+
+.query-type:focus-within {
+  outline: 2px solid hsl(169, 82%, 27%);
+  outline-offset: 2px;
+}
+
+.query-type input[type=radio] {
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
 }
