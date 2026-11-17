@@ -18,6 +18,23 @@
       right: 8px;
       background-color: goldenrod;
     }
+
+    nav { padding: 12px; background-color: lightskyblue; }
+    p { margin: 0 0 16px; }
+    section { height: 1200px; padding: 16px; }
+    footer { padding: 12px; background-color: gold; }
+
+    .aviso {
+      position: fixed; /* Siempre pegado a la ventana */
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .menu {
+      position: sticky; /* Se pega al llegar arriba */
+      top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -25,5 +42,10 @@
     Zapatillas
     <span class="oferta">-50%</span>
   </div>
+
+  <p>Desplázate hacia abajo y mira qué barras se quedan.</p>
+  <nav class="menu">Menú: me pego arriba al llegar</nav>
+  <section>Contenido largo de la página…</section>
+  <footer class="aviso">Aviso: siempre abajo de la ventana</footer>
 </body>
 </html>
