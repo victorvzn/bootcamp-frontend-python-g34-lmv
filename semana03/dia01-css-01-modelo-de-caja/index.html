@@ -18,12 +18,33 @@
       border: 5px solid green;
       padding: 10px; /* Espacio interno */
 
-      box-sizing: content-box; /*Por defecto */
+      box-sizing: content-box; /*Por defecto, no lo incluye el padding, margin, border en el calculo de la caja */
       box-sizing: border-box; 
+    }
+
+    .bloque {
+      background-color: lightcoral;
+      display: block; /* Valor por defecto */
+    }
+    .enlinea {
+      background-color: lightgreen;
+      display: inline;
+    }
+    .enlinea-bloque {
+      background-color: lightpink;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <div class="box">Esto es una caja</div>
+
+  <!-- Tipos de caja -->
+   <div class="bloque">BLOQUE</div>
+   <div class="enlinea">ENLINEA</div>
+   <div class="enlinea">ENLINEA</div>
+   <div class="enlinea">ENLINEA</div>
+   <div class="enlinea-bloque">ENLINEA Y BLOQUE</div>
+   <div class="enlinea-bloque">ENLINEA Y BLOQUE</div>
 </body>
 </html>
