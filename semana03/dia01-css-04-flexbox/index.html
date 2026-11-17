@@ -21,8 +21,10 @@
       background-color: lightgoldenrodyellow;
 
       display: flex;
-      flex-direction: row;
+      flex-direction: row-reverse; /* Cambiamos el eje a row */
+      flex-direction: row; /* Cambiamos el eje a row */
       /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
       gap: 5px;
 
       /* Alineación horizontal */
@@ -51,8 +53,11 @@
       flex-direction: row;
 
       justify-content: space-between;
-      width: 100%;
       align-items: center;
+
+      border: 1px solid red;
+
+      width: 100%;
     }
 
     .menu {
