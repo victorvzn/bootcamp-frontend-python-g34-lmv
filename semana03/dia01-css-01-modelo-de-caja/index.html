@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CSS: Modelo de caja</title>
   <style>
     .box {
       background-color: red;
@@ -12,8 +12,14 @@
       height: 50px;
 
       margin: 10px; /* Espacio externo */
+      margin: 16px 20px; /* Arriba y abajo, izquierda y derecha */
+      margin: 16px 20px 30px; /* Arriba, derecha e izquierda, abajo */
+      margin: 16px 20px 30px 40px; /* Arriba, derecha, abajo, izquierda */
       border: 5px solid green;
       padding: 10px; /* Espacio interno */
+
+      box-sizing: content-box; /*Por defecto */
+      box-sizing: border-box; 
     }
   </style>
 </head>
