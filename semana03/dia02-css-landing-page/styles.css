@@ -22,11 +22,28 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  /* RWD (Responsive Web Design) para imágenes */
+
+  max-width: 100%; /* Nunca sale de su contenedor */
+
+  height: auto; /* Conserva la proporción */
+}
+
 h1 {
   font-family: "Raleway", sans-serif;
   /* font-size: 2rem; */ /* 2rem <> 2 * 14px <> 28px */
 }
 
+/* UTILS */
+
 .hidden {
   display: none;
 }
+
