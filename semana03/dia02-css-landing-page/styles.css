@@ -47,6 +47,12 @@ h1 {
   display: none;
 }
 
+.wrapper {
+  /* width: 1440px; */
+
+  width: min(100% - 42px, 1440px);
+}
+
 /* HEADER SECTION */
 
 .header {
@@ -58,9 +64,13 @@ h1 {
 
   padding-top: 3rem; /* 42px <> 3rem <> 3 * 14px */
 
-  margin: 0 1rem;
+  margin: 0 auto;
 }
 
 .header__nav {
   /* TODO: terminar el css de esta navegación */
+  display: flex;
+  gap: 3rem; /* 42px <> 3rem <> 3 * 14px */
+
+  font-family: "Raleway", sans-serif;
 }
