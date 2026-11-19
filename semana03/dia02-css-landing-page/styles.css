@@ -49,3 +49,18 @@ h1 {
 
 /* HEADER SECTION */
 
+.header {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 3rem; /* 42px <> 3rem <> 3 * 14px */
+
+  margin: 0 1rem;
+}
+
+.header__nav {
+  /* TODO: terminar el css de esta navegación */
+}
