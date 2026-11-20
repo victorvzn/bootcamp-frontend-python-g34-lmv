@@ -1,0 +1,474 @@
+/* VARIABLES */
+
+/* Guardamos los colores en variables para reutilizarlos y cambiarlos en un solo lugar */
+:root {
+  --color-bg: hsl(40, 30%, 97%);          /* crema del fondo */
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark: hsl(171, 45%, 16%);       /* verde oscuro: textos y botones */
+  --color-text: hsl(171, 22%, 28%);       /* verde grisáceo: párrafos */
+  --color-orange: hsl(21, 99%, 71%);
+  --color-orange-light: hsl(21, 100%, 85%);
+  --color-cta-bg: hsl(150, 10%, 89%);     /* fondo de la tarjeta CTA */
+  --color-border: hsl(40, 10%, 88%);
+
+  --font-title: "Nunito", sans-serif;
+  --font-text: "Nunito Sans", sans-serif;
+}
+
+/* GENERALES */
+
+/* Selector universal */
+* {
+  /* border: 1px solid red; */ /* útil para "ver" las cajas mientras maquetamos */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 16px; /* 1rem <> 16px */
+}
+
+body {
+  background-color: var(--color-bg);
+
+  color: var(--color-text);
+
+  font-family: var(--font-text);
+  font-size: 1.125rem; /* 18px <> 1.125rem */
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  /* RWD (Responsive Web Design) para imágenes */
+  max-width: 100%; /* Nunca sale de su contenedor */
+  height: auto;    /* Conserva la proporción */
+
+  display: block;  /* Quita el espacio extra que deja debajo una imagen inline */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-dark);
+
+  font-family: var(--font-title);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* UTILS */
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 1192px); /* 2rem <> 32px: deja 16px de margen a cada lado en móvil */
+  margin-inline: auto;             /* centra horizontalmente */
+}
+
+/* Botón reutilizable (lo usamos en el header, hero y CTA) */
+.button {
+  display: inline-block;
+
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  border-radius: 0.625rem; /* 10px */
+
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  font-family: var(--font-title);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  white-space: nowrap; /* el texto del botón no se parte en dos líneas */
+
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--color-text);
+}
+
+/* Resaltado naranja detrás de una palabra ("Healthy", "30 minutes") */
+.highlight {
+  position: relative; /* el ::before se posiciona respecto a este span */
+  z-index: 0;         /* crea un contexto para que el ::before quede detrás del texto */
+
+  white-space: nowrap; /* evita que el resaltado se parta en dos líneas */
+}
+
+.highlight::before {
+  content: "";
+
+  position: absolute;
+  left: -0.05em;
+  right: -0.05em;
+  bottom: 0.05em;
+  z-index: -1;        /* lo manda detrás del texto */
+
+  height: 0.45em;     /* "em" hace que crezca junto con el tamaño de la letra */
+  border-radius: 0.1em;
+
+  background-color: var(--color-orange-light);
+}
+
+/* Títulos de sección (h2) */
+.section-title {
+  font-size: min(10vw, 3rem); /* 48px <> 3rem, en móvil se achica con el ancho de la pantalla */
+}
+
+/* HEADER SECTION */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.25rem 3.75rem; /* 20px 60px */
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+
+  color: var(--color-dark);
+
+  font-family: var(--font-title);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 800;
+}
+
+.header__logo-icon {
+  width: 2.5rem; /* 40px */
+}
+
+.header__nav {
+  display: flex;
+  gap: 2.5rem; /* 40px */
+}
+
+.header__link {
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid transparent; /* borde invisible para que no "salte" en el hover */
+
+  color: var(--color-dark);
+}
+
+.header__link:hover,
+.header__link--active {
+  border-bottom-color: var(--color-orange);
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative; /* referencia para las curvas decorativas */
+
+  padding-top: 5rem;  /* 80px */
+  padding-bottom: 5rem;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* 24px */
+
+  margin-bottom: 4rem; /* 64px */
+
+  text-align: center;
+}
+
+.hero__title {
+  font-size: min(12vw, 4.5rem); /* 72px <> 4.5rem */
+}
+
+.hero__text {
+  width: min(100%, 600px);
+
+  margin-bottom: 1.5rem;
+
+  font-size: 1.25rem; /* 20px */
+}
+
+.hero__frame {
+  position: relative; /* queda por encima de las curvas */
+  z-index: 1;
+
+  width: min(100% - 2rem, 1216px);
+  margin-inline: auto;
+  padding: 0.75rem;     /* 12px: el "marco" blanco */
+  border-radius: 1.25rem;
+
+  background-color: var(--color-white);
+}
+
+.hero__image {
+  width: 100%;
+  border-radius: 0.75rem; /* 12px */
+
+  aspect-ratio: 16 / 7;   /* recorta la foto a una proporción panorámica */
+  object-fit: cover;      /* rellena sin deformar la imagen */
+}
+
+/* Curvas lavanda a los costados */
+.hero__curve {
+  position: absolute;
+}
+
+.hero__curve--left {
+  left: 0;
+  top: 38rem;
+  width: 7.5rem; /* 120px */
+}
+
+.hero__curve--right {
+  right: 0;
+  top: 15rem;
+  width: 7.5rem;
+}
+
+/* FEATURES SECTION */
+
+.features {
+  padding-top: 2rem;
+  padding-bottom: 6rem; /* 96px */
+  border-bottom: 1px solid var(--color-border);
+}
+
+.features__title {
+  margin-bottom: 3rem;
+
+  text-align: center;
+}
+
+.features__list {
+  display: flex;
+  gap: 2rem; /* 32px */
+}
+
+.feature {
+  flex: 1; /* las 3 columnas ocupan el mismo ancho */
+}
+
+.feature__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3.75rem; /* 60px */
+  height: 3.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+
+  background-color: var(--color-white);
+}
+
+.feature__icon img {
+  width: 1.75rem; /* 28px */
+}
+
+.feature__title {
+  margin-bottom: 0.75rem;
+
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+}
+
+/* REAL LIFE SECTION */
+
+.real-life {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* 64px */
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.real-life__content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.real-life__image {
+  flex: 1;
+
+  width: 50%;
+  border-radius: 0.75rem;
+
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* CTA SECTION */
+
+.cta {
+  position: relative;  /* referencia para las formas decorativas */
+  overflow: hidden;    /* corta las formas que se salen de la tarjeta */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 6rem 2rem;  /* 96px 32px */
+  border-radius: 1rem; /* 16px */
+
+  background-color: var(--color-cta-bg);
+
+  text-align: center;
+}
+
+/* El texto y el botón quedan por encima de las formas */
+.cta > :not(.cta__shape) {
+  position: relative;
+  z-index: 1;
+}
+
+.cta__text {
+  margin-bottom: 1rem;
+
+  font-size: 1.25rem;
+}
+
+.cta__shape {
+  position: absolute;
+}
+
+.cta__shape--fork {
+  left: -2rem;
+  bottom: -3rem;
+  width: 16rem;
+}
+
+.cta__shape--knife {
+  right: 0;
+  bottom: 4rem;
+  width: 16rem;
+}
+
+.cta__shape--squiggle-orange {
+  left: 0;
+  top: 5rem;
+  width: 8rem;
+}
+
+.cta__shape--squiggle-teal {
+  right: 0;
+  bottom: 4rem;
+  width: 11rem;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer__text {
+  color: var(--color-dark);
+
+  font-size: 1rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__social-link img {
+  width: 1.5rem; /* 24px */
+
+  transition: transform 0.2s;
+}
+
+.footer__social-link:hover img {
+  transform: scale(1.15);
+}
+
+/* RESPONSIVE (tablet y móvil) */
+
+@media (max-width: 768px) {
+  .header {
+    padding-inline: 1rem;
+  }
+
+  /* TODO: en móvil ocultamos el menú. Reto: crear un menú hamburguesa */
+  .header__nav {
+    display: none;
+  }
+
+  .header__logo {
+    font-size: 1rem;
+  }
+
+  .header__logo-icon {
+    width: 2rem;
+  }
+
+  .header__button {
+    padding: 0.5rem 1rem;
+
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  /* Las curvas tapan contenido en pantallas pequeñas */
+  .hero__curve {
+    display: none;
+  }
+
+  .hero__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Las columnas pasan a ser filas */
+  .features__list,
+  .real-life {
+    flex-direction: column;
+  }
+
+  .real-life {
+    align-items: stretch;
+    gap: 2.5rem;
+  }
+
+  .real-life__image {
+    width: 100%;
+  }
+
+  .cta {
+    padding-block: 4rem;
+  }
+
+  .cta__shape {
+    opacity: 0.5; /* más suaves para que no compitan con el texto */
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

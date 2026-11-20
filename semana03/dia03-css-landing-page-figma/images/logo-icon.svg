@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <!-- Brote: dos hojas saliendo del bowl -->
+  <path d="M20 18C20 12 16 8 10 8c0 6 4 10 10 10Z" fill="#4AB09A"/>
+  <path d="M20 18c0-7 4-12 11-12 0 7-4 12-11 12Z" fill="#FE9F6B"/>
+  <path d="M20 22v-6" stroke="#163A34" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bowl -->
+  <path d="M4 21h32c0 9-7 15-16 15S4 30 4 21Z" fill="#163A34"/>
+</svg>
