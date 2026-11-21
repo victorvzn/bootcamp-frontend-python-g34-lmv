@@ -80,7 +80,7 @@ h1 {
 /* TODO : Terminar el css para la sección del hero. Usen bem para el nombrado de las clases y reutilicen la función min. */
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -126,4 +126,28 @@ h1 {
 
   background-color: hsl(176, 68%, 64%);
   /* FALTA: agregar el degradado del botón */
+}
+
+/* COLLABORATION SECTION */
+
+/* TODO: Terminar la sección colaboracion aplicando los css correspondientes. */
+
+.collaboration {
+  border: 1px solid red;
+}
+
+.productive {
+
+}
+
+.productive__title {
+
+}
+
+.productive__text {
+
+}
+
+.productive__link {
+
 }
