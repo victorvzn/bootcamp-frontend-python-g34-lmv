@@ -144,6 +144,12 @@ h1 {
   margin-bottom: 4rem;
 }
 
+@media (min-width: 992px) {
+  .collaboration {
+    flex-direction: row;
+  }
+}
+
 .productive {
   display: flex;
 
@@ -154,6 +160,12 @@ h1 {
 
 .productive__title {
   font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 992px) {
+  .productive__title {
+    font-size: 4rem;
+  }
 }
 
 .productive__text {
@@ -173,6 +185,8 @@ h1 {
 
   align-self: flex-start;
 }
+
+
 
 /* TODO: Terminar la maquetación con html y estilos a la sección testimonials */
 
