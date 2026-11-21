@@ -188,6 +188,38 @@ h1 {
 }
 
 .testimonial {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 2rem;
+
+  background-color: hsl(219, 30%, 18%);
+
+  border-radius: .5rem;
+}
+
+.testimonial__text {
+  font-size: 1.4rem;
+
+  margin-bottom: 2rem;
+}
+
+.testimonial__profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+}
+
+.testimonial__user h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.testimonial__user h5 {
+  font-weight: 400;
 }
