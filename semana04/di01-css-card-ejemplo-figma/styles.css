@@ -27,6 +27,8 @@ h1 {
 p, span {
   font-weight: 400; /* Regular */
   font-size: 14px;
+  color: #626B7D;
+  line-height: 20px;
 }
 
 img {
@@ -47,4 +49,21 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #4F46E5;
+  color: white;
+
+  font-weight: 600;
+  font-size: 14px;
 }
