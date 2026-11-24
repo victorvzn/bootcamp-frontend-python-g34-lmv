@@ -11,4 +11,31 @@ body {
   background-color: #F5F5F5;
 
   font-family: "Inter", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 600; /* Semibold */
+  font-size: 20px;
+}
+
+p, span {
+  font-weight: 400; /* Regular */
+  font-size: 14px;
+}
+
+img {
+  /* RWD para imágenes */
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  width: 320px;
+
+  background-color: white;
 }
