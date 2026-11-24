@@ -24,3 +24,23 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* UTILS */
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  /* border: 1px solid red; */
+
+  width: min(100%, 1440px);
+
+  margin: 0 auto;
+}
+
+/* HEADER SECTION */
+
+.header {
+  border: 1px solid red;
+}
