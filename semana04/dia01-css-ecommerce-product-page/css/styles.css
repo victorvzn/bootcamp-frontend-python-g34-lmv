@@ -1,2 +1,26 @@
+/* GENERALES */
+
+* {
+  /* Reseteador de estilos */
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+html {
+  font-size: 16px; /* Por defecto, no es necesario agregarlo pero lo añadimos como referencia*/
+}
+
+img {
+  /* RWD para imágenes */
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
