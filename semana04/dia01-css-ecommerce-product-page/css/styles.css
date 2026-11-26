@@ -59,7 +59,7 @@ a {
 .header__links {
   display: flex;
   gap: 1.5rem;
-  font-size: .9rem;
+  font-size: .9rem; /* 0.9 x 16px = 14.4px <> .9rem */
   color: hsl(219, 9%, 45%);
 }
 
