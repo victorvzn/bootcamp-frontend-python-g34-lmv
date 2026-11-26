@@ -199,3 +199,59 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   color: hsl(219, 9%, 45%);
   text-decoration: line-through;
 }
+
+.cart {
+  /* border: 1px solid red; */
+
+  display: flex;
+  gap: 1rem
+}
+
+.cart__quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__quantity button {
+  border: none;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(223, 64%, 98%);
+}
+
+.cart__quantity input {
+  height: 50px;
+  border: 0;
+  width: 80px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: hsl(223, 64%, 98%);
+}
+
+.cart__quantity button:first-child {
+  /* border: 1px solid blue; */
+  border-radius: 1rem 0 0 1rem;
+}
+
+.cart__quantity button:last-child {
+  /* border: 1px solid green; */
+  border-radius: 0 1rem 1rem 0;
+}
+
+.cart__add {
+  min-width: 250px;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  font-weight: 700;
+  background-color: hsl(26, 100%, 55%);
+
+  border-radius: .6rem;
+}
