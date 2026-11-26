@@ -91,10 +91,20 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   /* border: 1px solid red; */
 
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
+  flex-direction: column;
 
-  padding: 4rem;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  /* Estos estilos se aplican para tablets, desktops + */
+  .product-detail {
+    flex-direction: row;
+
+    gap: 5rem;
+
+    padding: 4rem;
+  }
 }
 
 .gallery {
@@ -105,13 +115,19 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   gap: 2rem;
 }
 
-.gallery__cover img {
-  border-radius: 1rem;
+.gallery__slider {
+  display: none;
 }
 
-.gallery__slider {
-  display: flex;
-  gap: 1rem;
+@media (min-width: 992px) {
+  .gallery__cover img {
+    border-radius: 1rem;
+  }
+
+  .gallery__slider {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 .gallery__slider div {
@@ -147,7 +163,13 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   flex-direction: column;
   gap: 1rem;
 
-  padding: 2rem 0;
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .product {
+    padding: 2rem 0;
+  }
 }
 
 .product__subtitle {
@@ -171,7 +193,16 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 
 .product__price {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .product__price {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .product__price--wrapper {
@@ -204,7 +235,14 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   /* border: 1px solid red; */
 
   display: flex;
+  flex-direction: column;
   gap: 1rem
+}
+
+@media (min-width: 992px) {
+  .cart {
+    flex-direction: row;
+  }
 }
 
 .cart__quantity {
@@ -223,12 +261,18 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 .cart__quantity input {
   height: 50px;
   border: 0;
-  width: 80px;
+  width: 100%;
   padding: 1rem;
   text-align: center;
   font-weight: 700;
   font-size: 1.2rem;
   background-color: hsl(223, 64%, 98%);
+}
+
+@media (min-width: 992px) {
+  .cart__quantity input {
+    width: 80px;
+  }
 }
 
 .cart__quantity button:first-child {
@@ -254,4 +298,6 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   background-color: hsl(26, 100%, 55%);
 
   border-radius: .6rem;
+
+  padding: .7rem .2rem;
 }
