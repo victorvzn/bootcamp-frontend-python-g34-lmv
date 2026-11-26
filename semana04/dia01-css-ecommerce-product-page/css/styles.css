@@ -166,4 +166,5 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 .product__description {
   color: hsl(219, 9%, 45%);
   line-height: 1.5;
+  margin-top: 1rem;
 }
