@@ -42,5 +42,10 @@ a {
 /* HEADER SECTION */
 
 .header {
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 1.5rem 1rem;
+
+  border-bottom: 1px solid hsl(220, 14%, 75%);
 }
