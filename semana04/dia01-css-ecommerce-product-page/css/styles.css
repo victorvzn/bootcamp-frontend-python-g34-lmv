@@ -85,6 +85,8 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   gap: 2rem;
 }
 
+/* PRODUCT DETAIL */
+
 .product-detail {
   /* border: 1px solid red; */
 
@@ -132,4 +134,36 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 
 .gallery__photo--active img {
   opacity: 0.5;
+}
+
+/* PRODUCT SECTION */
+
+/* TODO: Terminar la sección de producto con css */
+
+.product {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem 0;
+}
+
+.product__subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(219, 9%, 45%);
+  letter-spacing: .1rem;
+}
+
+.product__title {
+  font-size: 3rem;
+  color: hsl(220, 13%, 13%);
+  line-height: 1;
+}
+
+.product__description {
+  color: hsl(219, 9%, 45%);
+  line-height: 1.5;
 }
