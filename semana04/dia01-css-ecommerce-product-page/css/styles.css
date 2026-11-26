@@ -49,3 +49,22 @@ a {
 
   border-bottom: 1px solid hsl(220, 14%, 75%);
 }
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: .9rem;
+  color: hsl(219, 9%, 45%);
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
