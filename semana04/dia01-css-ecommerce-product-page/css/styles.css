@@ -86,7 +86,7 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 }
 
 .product-detail {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: row;
@@ -96,14 +96,40 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 }
 
 .gallery {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.gallery__cover img {
+  border-radius: 1rem;
+}
+
 .gallery__slider {
   display: flex;
   gap: 1rem;
+}
+
+.gallery__slider div {
+  width: 90px;
+  height: 90px;
+  border-radius: 1rem;
+  /* border: 1px solid green; */
+  overflow: hidden;
+  border: 3px solid transparent;
+}
+
+.gallery__slider div:hover {
+  border: 3px solid hsl(26, 100%, 55%);
+  cursor: pointer;
+}
+
+.gallery__photo--active {
+  border: 3px solid hsl(26, 100%, 55%) !important;
+}
+
+.gallery__photo--active img {
+  opacity: 0.5;
 }
