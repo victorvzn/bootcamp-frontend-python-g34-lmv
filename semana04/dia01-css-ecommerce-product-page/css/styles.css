@@ -141,7 +141,7 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 /* TODO: Terminar la sección de producto con css */
 
 .product {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -167,4 +167,35 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   color: hsl(219, 9%, 45%);
   line-height: 1.5;
   margin-top: 1rem;
+}
+
+.product__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__price--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product__amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.product__discount {
+  background-color: hsl(220, 13%, 13%);
+  color: white;
+
+  padding: .1rem .5rem;
+  border-radius: .4rem;
+
+  font-weight: 700;
+}
+
+.product__price-before {
+  color: hsl(219, 9%, 45%);
+  text-decoration: line-through;
 }
