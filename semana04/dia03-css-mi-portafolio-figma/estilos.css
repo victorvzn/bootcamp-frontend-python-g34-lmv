@@ -107,3 +107,23 @@ a {
 }
 
 /* TODO: Terminar la sección hero con css  usando el html propuesto */
+
+.hero {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem;
+}
+
+.hero__gretting {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
+}
+
+.hero__gretting span {
+  color: var(--primary-color-gold);
+}
