@@ -53,3 +53,25 @@ a {
 
   border: 1px solid red;
 }
+
+/* HEADER SECTION */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+.header__logo {
+  color: var(--primary-color-gold);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.header__menu {
+  display: none;
+}
+
+/* TODO: Mostrar mediante media queries el menu solo en la versión desktop */
