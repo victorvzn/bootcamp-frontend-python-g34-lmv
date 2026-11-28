@@ -51,7 +51,7 @@ a {
 
   margin: 0 auto;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* HEADER SECTION */
@@ -75,3 +75,11 @@ a {
 }
 
 /* TODO: Mostrar mediante media queries el menu solo en la versión desktop */
+
+@media (min-width: 992px) {
+  .header__menu {
+    display: flex;
+
+    gap: 1.5rem;
+  }
+}
