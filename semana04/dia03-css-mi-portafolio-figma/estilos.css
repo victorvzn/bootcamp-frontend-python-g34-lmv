@@ -109,7 +109,7 @@ a {
 /* TODO: Terminar la sección hero con css  usando el html propuesto */
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -126,4 +126,19 @@ a {
 
 .hero__gretting span {
   color: var(--primary-color-gold);
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
+}
+
+.hero__description {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-regular);
+}
+
+.hero__photo {
+  border-radius: 50%;
 }
