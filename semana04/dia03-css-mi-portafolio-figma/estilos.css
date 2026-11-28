@@ -142,3 +142,19 @@ a {
 .hero__photo {
   border-radius: 50%;
 }
+
+.stack {
+  border: 1px solid red;
+
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px; */
+  grid-template-columns: 1fr 1fr; /* fr = Fracción de espacio */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .stack {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
